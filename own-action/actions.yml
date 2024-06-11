@@ -1,0 +1,17 @@
+# action.yml
+name: 'dockerized action'
+description: 'description'
+inputs:
+  event_type: 
+    required: true
+outputs:
+  date:
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.event_type }}
+branding:
+  icon: 'gift'
+  color: 'blue'

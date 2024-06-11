@@ -1,0 +1,17 @@
+name: excercise 5
+on: push
+jobs: 
+    main:
+        runs-on: ubuntu-latest
+        steps:
+        -   name: checks code out
+            uses: actions/checkout@v1
+        -   name: runs own action
+            id: own
+            uses: ./own-action
+            with:
+                arg: $github.event_name
+        -   name: gets output
+            run: echo "date was ${{ steps.own.outputs.date }}"
+            
+
