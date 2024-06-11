@@ -12,6 +12,5 @@ jobs:
             with:
                 args: ${{ github.event_name }}
         -   name: gets output
-            run: echo "date was ${{ steps.own.outputs.date }}"
+            run: echo "--- push date is ${{ steps.own.outputs.date }} ---"
             
-
