@@ -10,7 +10,7 @@ jobs:
             id: own
             uses: ./own-action
             with:
-                arg: $github.event_name
+                arg: ${{ github.event_name }}
         -   name: gets output
             run: echo "date was ${{ steps.own.outputs.date }}"
             
